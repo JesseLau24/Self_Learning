@@ -37,5 +37,5 @@ for i in nums:
     zork += i
     print('Sum:', zork, 'i:', i)
 
-print('After:', zork)
+print('Finished:', zork)
 
