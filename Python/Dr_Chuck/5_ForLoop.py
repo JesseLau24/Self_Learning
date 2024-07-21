@@ -35,7 +35,7 @@ print('Before:', zork)
 
 for i in nums:
     zork += i
-    print('Sum:', zork, 'i:', i)
+    print( 'i:', i, 'Sum:', zork)
 
 print('Finished. Total sum:', zork)
 
