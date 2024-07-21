@@ -1,5 +1,5 @@
 # Finding the Average
-nums = [1, 22, 13.4, 22, 15, 23, 12, -9, 22, 17, 33.75, 22, 120, 34]
+nums = [1, 22, 13.4, 22, 15, 23, 12, -9, 22, -17, 33.75, 22, -22, 120, 34]
 
 count = 0
 sum = 0
@@ -53,10 +53,12 @@ for i in nums:
 print(f'Finish. {count_larger} items larger than 13, {count_small} smaller.')
 
 # Find the Smallest
-smallest = nums[0]
+smallest = None # here we can use None
 
 for i in nums:
-    if i < smallest:
+    if smallest is None: # is operator checks both value and type
+        smallest = i
+    elif i < smallest:
         smallest = i
         print('Current Smallest:', smallest)
 
