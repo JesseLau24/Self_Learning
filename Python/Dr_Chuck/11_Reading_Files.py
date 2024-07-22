@@ -58,4 +58,68 @@ for lines in fhand:
     count += 1
 print('Lines count:', count)
 
+# Searching through a file
+target = 'From'
+isFlag = False # track if the target is found
+
+fhand = open(file_dir, 'r')
+for line in fhand:
+    if line.startswith(target):
+        line = line.rstrip() # this strips the '\n' at the end of the line
+        print('Search Result:', line)
+        isFlag = True
+
+if not isFlag:
+    print('Target not found')
+
+# Or we can skip with continue
+target = 'I'
+
+fhand = open(file_dir, 'r')
+for line in fhand:
+    line = line.rstrip()
+    if not line.startswith(target):
+        continue
+    print('Search result:', line)
+
+# we can also print the lines with certain words
+target = 'second'
+isFlag = False
+
+fhand = open(file_dir, 'r')
+for line in fhand:
+    if target in line:
+        line = line.rstrip()
+        print('Search result:', line)
+        isFlag = True
+
+if not isFlag:
+    print('Target not found.')
+
+# Prompt for File Name
+target_dir = '/home/jesse/VS_Code_Project/Self_Learning/Python/Dr_Chuck/'
+file_name = input('Enter file name: ')
+
+try:
+    fhand = open(target_dir + file_name)
+except:
+    print('Error, please check file name or directory.')
+    quit() 
+    # this is import because without it, 
+    # it would continue the following code
+
+target = 'Python'
+isFlag = False
+
+for line in fhand:
+    if target in line:
+        line = line.rstrip()
+        print('Search result: ', line)
+        isFlag = True
+
+if not isFlag:
+    print('Target not found.')
+
+
+
 

@@ -2,9 +2,13 @@ this is the first line.
 this is the second line.
 this is the third line.
 I can go on, but I don't see the point.
+From 1 to 100, my favorite number is 19.
 
 I guess this is going to make some sense.
 But even if it doesn't, it's alright.
+From what I can see, it is just a test file.
+
+From now on, I'll be focusing on my plan.
 
 I'll be learning Python, C++, a bunch of math,
 and also get CFA level 1 as well.
