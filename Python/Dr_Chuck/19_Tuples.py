@@ -41,6 +41,15 @@ try:
 except:
     print('Error, cannot reverse() tuples')
 
+# why do we like tuples?
+# 1. it is more efficient in terms of memory use and performance than list
+# 2. it is immutable, which is safer for storing data you don't want to change at all
+
+# 3. tuple and assignment
+(x, y, z) = (4, 5, 6)
+print('x =', x)
+print('y =', y)
+print('z =', z)
 
 
 
