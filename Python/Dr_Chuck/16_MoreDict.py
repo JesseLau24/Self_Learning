@@ -21,6 +21,21 @@ print('\nkey is the name, value is the value of the key')
 for key in freq:
     print(key, freq[key])
 
+# retrieving lists of keys and values
 
+# method 1
+print('\n1. list(freq):', list(freq))
 
+# method 2
+print('\n2. freq.keys():', freq.keys())
+
+# get values:
+print('\nfreq.values():', freq.values())
+
+# get list of 2 tuples
+print('\nfreq.items():', freq.items())
+
+# two iteration variables
+for aaa, bbb in freq.items():
+    print(f'{aaa} : {bbb}')
 
