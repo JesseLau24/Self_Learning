@@ -16,5 +16,11 @@ except IOError:
 
 print(freq)
 
+# keys and values: 
+print('\nkey is the name, value is the value of the key')
+for key in freq:
+    print(key, freq[key])
+
+
 
 

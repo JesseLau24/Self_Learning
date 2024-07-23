@@ -97,7 +97,7 @@ if not isFlag:
     print('Target not found.')
 
 # Prompt for File Name
-target_dir = '/home/jesse/VS_Code_Project/Self_Learning/Python/Dr_Chuck/'
+target_dir = '/home/jesse/VS_Code_Projects/Self_Learning/Python/Dr_Chuck/'
 file_name = input('Enter file name: ')
 
 try:
