@@ -1,39 +1,50 @@
 import os
 
-# the cwd is not this folder
+# Define the working directory
 cw_dir = os.getcwd()  + '/Python/Dr_Chuck/'
-file_name = input('input file name: ')
-file_dir = cw_dir + file_name
+file_name = input('Input file name: ')
+file_path = cw_dir + file_name
 
-freq = dict()
+# Initialize the dictionary to store word frequencies
+word_freq = {}
 
 try:
-    fhand = open(file_dir)
-    for line in fhand:
-        words = line.split()
-        for word in words:
-            freq[word] = freq.get(word, 0) + 1
-except:
-    print('Error')
+    # Open the file and read it line by line
+    with open(file_path, 'r') as file:
+        for line in file:
+            # Split each line into words
+            words = line.split()
+            for word in words:
+                # Convert words to lowercase for case insensitivity
+                word = word.lower()
+                # Increment the word frequency count
+                word_freq[word] = word_freq.get(word, 0) + 1
 
-# count most frequent word:
+except FileNotFoundError:
+    print(f'Error: The file "{file_path}" was not found.')
+    exit()
+except Exception as e:
+    print(f'Error: An unexpected error occurred: {e}')
+    exit()
+
+# Find the most frequent word
 most_freq_word = None
-count = 0
+highest_count = 0
 
-for key, value in freq.items():
-    if most_freq_word is None or value > count:
-        most_freq_word = key
-        count = value
+for word, count in word_freq.items():
+    if most_freq_word is None or count > highest_count:
+        most_freq_word = word
+        highest_count = count
 
-print('most frequent word:', most_freq_word, '\nfrequency:', count)
+print('Most frequent word:', most_freq_word)
+print('Frequency:', highest_count)
 
-# count overall word count:
-sum = 0
+# Count the total number of words
+total_word_count = sum(word_freq.values())
+print('Total word count:', total_word_count)
 
-for key in freq:
-    sum += freq[key]
-
-print('total word count:', sum)
-
+# Count the number of unique words
+unique_word_count = len(word_freq)
+print('Unique words count:', unique_word_count)
 
 
