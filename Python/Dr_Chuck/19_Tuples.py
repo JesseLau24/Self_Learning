@@ -51,6 +51,16 @@ print('x =', x)
 print('y =', y)
 print('z =', z)
 
+# tuples are comparable
+# if the first item is equal between 2 tuples,
+# Python goes to compare the next element, and so on,
+# until it finds elements that differ
+bool = (0, 1, 2, 10000, 7) > (0, 1, 2, 3, 900000, 23)
+print(bool)
+
+# you can also compare String items in tuple
+bool = ('Sally', 'Mandy') > ('Sally', 'Manny')
+print(bool)
 
 
 
