@@ -74,5 +74,13 @@ for v, k in temp:
 
 print('\nf_word_sorted:\n', f_word_sorted)
 
+# greedy matching: it always try to reach 
+# the maxium length of the string
+
+x = 'From: Jesse to: Grace'
+y = re.findall('^F.+:', x)
+# instead of 'From:', it goes for 'From: Jesse To:'
+# everytime it has the chance, it goes for the longest
+print(y)
 
 
