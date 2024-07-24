@@ -7,6 +7,7 @@ words_freq = dict()
 
 # count and store freq info into dict
 for line in fhand:
+    line = line.rstrip() # avoid counting whitespaces as words
     words = line.split()
     for word in words:
         words_freq[word] = words_freq.get(word, 0) + 1
