@@ -29,17 +29,32 @@ with open(file_dir, 'r') as fhand:
     for line in fhand:
         line = line.rstrip()
         if re.search('The ', line):  # Matches 'The ' anywhere in the line
+            # here we use 'The ' so that 'They', 'There' and etc. would not give us any false alert
             print(line)
 
 # Find lines starting with 'The'
-print("Lines starting with 'The':")
+print("\nLines starting with 'The':")
 with open(file_dir, 'r') as fhand:
     for line in fhand:
         line = line.rstrip()
         if re.search('^The ', line):  # Matches lines starting with 'The '
             print(line)
 
+# find this pattern: X...:...
+print('\nfind this pattern: X...:..')
+with open(file_dir, 'r') as fhand:
+    for line in fhand:
+        line = line.rstrip()
+        if re.search('^X.*:', line):
+            print(line)
 
+# find this pattern: 'X-'+None_white_character+':'
+print('\nfind this pattern: X followed by none white char then :')
+with open(file_dir, 'r') as fhand:
+    for line in fhand:
+        line = line.rstrip()
+        if re.search('^X-\S+:', line):
+            print(line)
 
 
 
