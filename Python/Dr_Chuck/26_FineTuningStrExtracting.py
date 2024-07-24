@@ -8,7 +8,8 @@ tar_lst = list()
 with open(file_dir, 'r') as file:
     for line in file:
         line = line.rstrip()
-        matches = re.findall('\S+@\S+', line)
+        matches = re.findall('\S+@\S+', line) 
+        # it looks for all non-whitespace characters on both sides of '@'
         if len(matches) != 0:
             for i in matches:
                 tar_lst.append(i)
