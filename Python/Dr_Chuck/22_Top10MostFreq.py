@@ -31,3 +31,7 @@ for v, k in wds_freq_lst[:10]:
     top_ten.append((k, v))
 
 print(top_ten)
+
+# now we can iterate through them
+for k, v in top_ten:
+    print(f'top word: {k}\nfrequency: {v}\n')
