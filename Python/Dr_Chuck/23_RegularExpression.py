@@ -21,49 +21,24 @@
 # \S: Matches any non-whitespace character.
 import re
 
-file_dir = '/home/jesse/VS_Code_Projects/Self_Learning/Python/Dr_Chuck/18_MushroomRock.txt'
-fhand = open(file_dir)
+file_dir = '/home/jesse/VS_Code_Projects/Self_Learning/Python/Dr_Chuck/23_test.txt'
 
-# find lines with 'The'
-print("lines with 'The_':")
-for line in fhand:
-    line = line.rstrip()
-    if re.search('The ', line): # same as 'find()' method
-        print(line)
+# Find lines containing 'The'
+print("Lines with 'The':")
+with open(file_dir, 'r') as fhand:
+    for line in fhand:
+        line = line.rstrip()
+        if re.search('The ', line):  # Matches 'The ' anywhere in the line
+            print(line)
 
-fhand.close()
+# Find lines starting with 'The'
+print("Lines starting with 'The':")
+with open(file_dir, 'r') as fhand:
+    for line in fhand:
+        line = line.rstrip()
+        if re.search('^The ', line):  # Matches lines starting with 'The '
+            print(line)
 
-# Reopen the file:
-fhand = open(file_dir)
-
-# find lines start with 'The'
-print("lines start with 'The_':")
-for line in fhand:import re
-
-file_dir = '/home/jesse/VS_Code_Projects/Self_Learning/Python/Dr_Chuck/18_MushroomRock.txt'
-fhand = open(file_dir)
-
-# find lines with 'The'
-print("lines with 'The_':")
-for line in fhand:
-    line = line.rstrip()
-    if re.search('The ', line): # same as 'find()' method
-        print(line)
-
-fhand.close()
-
-# Reopen the file:
-fhand = open(file_dir)
-
-# find lines start with 'The'
-print("lines start with 'The_':")
-for line in fhand:
-    line = line.rstrip()
-    if re.search('^The ', line): # here we use 'The ' so we filtered out 'They', 'There' and etc.
-        print(line)
-    line = line.rstrip()
-    if re.search('^The ', line):
-        print(line)
 
 
 
