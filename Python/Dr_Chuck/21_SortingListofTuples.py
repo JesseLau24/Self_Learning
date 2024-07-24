@@ -20,21 +20,21 @@ for k, v in temp:
 dict_2 = {'a': 13, 'b': 150, 'c': 9, 'd': 232}
 
 # create an empty list
-temp = list()
+temp_1 = list()
 
 # append the tuple of key and values in reversed order
 for k, v in dict_2.items():
-    temp.append((v, k))
+    temp_1.append((v, k))
 
-print('reversed but unsorted:',temp)
+print('reversed but unsorted:',temp_1)
 
 # sort it:
-temp = sorted(temp, reverse=True)
-print('reversed and sorted:', temp)
+temp_1 = sorted(temp_1, reverse=True)
+print('reversed and sorted:', temp_1)
 
 # change back the order:
 temp_2 = list()
-for v, k in temp:
+for v, k in temp_1:
     temp_2.append((k, v))
 print('back to dict order k: v',temp_2)
 
