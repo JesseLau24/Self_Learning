@@ -7,7 +7,7 @@ cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
 mysocket.send(cmd)
 
 while True:
-    data = mysocket.recv(512)
+    data = mysocket.recv(1024) # here you can adjust the number
     if (len(data) < 1):
         break
     print(data.decode())
