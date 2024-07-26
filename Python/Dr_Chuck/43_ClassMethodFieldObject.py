@@ -43,3 +43,11 @@ buster.display_info()
 # Name: Buster
 # Breed: Bulldog
 # Length: 24 inches
+
+# Type of object 'buster'
+print('Type of "huahua":', type(huahua))
+# will display a list of all the attributes and methods associated
+# with the 'huahua' object. 
+print('What are in "huahua":',dir(huahua)) 
+
+
