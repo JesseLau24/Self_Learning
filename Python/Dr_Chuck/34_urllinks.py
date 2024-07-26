@@ -7,7 +7,7 @@ ctx = ssl.create_default_context()  # Create a default SSL context
 ctx.check_hostname = False  # Disable hostname verification (ignore SSL certificate hostname check)
 ctx.verify_mode = ssl.CERT_NONE  # Disable certificate verification (ignore SSL certificate validation)
 
-url = input('Enter - ')  # Prompt the user to enter a URL (e.g., http://www.dr-chuck.com/page1.htm)
+url = input('Enter - ')  # Prompt the user to enter a URL (e.g., http://www.dr-chuck.com/)
 html = urllib.request.urlopen(url, context=ctx).read()  # Open the URL, apply SSL context to ignore certificate errors, and read the HTML content
 soup = BeautifulSoup(html, 'html.parser')  # Parse the HTML content using BeautifulSoup with the 'html.parser' parser
 
