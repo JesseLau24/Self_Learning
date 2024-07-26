@@ -24,9 +24,11 @@ input = '''[
 info = json.loads(input)
 
 # Print the number of items in the list
-print('User count:', len(info))
+print('type(info:)',type(info))
 
 # Iterate over each dictionary in the list
+print('User count:', len(info))
+
 for item in info:
     # Print the value associated with the "name" key
     print('Name:', item['name'])

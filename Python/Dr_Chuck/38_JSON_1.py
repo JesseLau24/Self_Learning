@@ -17,6 +17,7 @@ data = '''{
 
 # Parse the JSON string into a Python dictionary
 info = json.loads(data)
+print('type(info):', type(info))
 
 # Print the value associated with the "name" key in the dictionary
 print('Name:', info["name"])
