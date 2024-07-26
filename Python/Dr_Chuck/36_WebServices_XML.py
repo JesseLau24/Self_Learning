@@ -31,14 +31,19 @@ data2 = '''
         <email>jane.smith@example.com</email>
         <phone>555-5678</phone>
     </contact>
-</contacts>
-'''
+</contacts>'''
 
 # Parse the XML data from the string
 tree2 = ET.fromstring(data2)
 
+# stores data to a list
+lst = tree2.findall('contact')
+print('\nlst = tree2.findall(contact):\n',lst)
+print('number after at(sth like: 0x7f8f506570) is the memory location.')
+print('\ncontact count:', len(lst))
+
 # Iterate over all 'contact' elements to access 'name' and 'email' under each
-for contact in tree2.findall('contact'):
+for contact in lst:
     name = contact.find('name').text
     email = contact.find('email').text
     print('Name:', name)
