@@ -54,6 +54,3 @@ buster.bark()
 print('huahua gets destructedbecause the variable name is reasigned wtih other values')
 print('now buster gets destructed because it is the last line of this python file:')
 print('but you can also call __del__ like "del huahua".')
-
-
- 
