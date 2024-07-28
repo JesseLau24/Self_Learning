@@ -1,0 +1,156 @@
+Inheritance in Python is a fundamental concept in object-oriented 
+programming (OOP) that allows a class to inherit attributes and 
+methods from another class. The class that inherits is called the 
+child class or subclass, and the class being inherited from is 
+called the parent class or superclass. This mechanism helps in 
+reusing code and creating a hierarchical relationship between 
+classes.
+
+Basic Concepts
+Parent Class (Superclass): The class whose attributes and methods 
+are inherited.
+Child Class (Subclass): The class that inherits from the parent 
+class and can have additional attributes and methods or override 
+the parent class's methods.
+
+Syntax
+To create a subclass, you define a new class and specify the 
+parent class in parentheses.
+
+Python Example:
+
+class ParentClass:
+    # Parent class attributes and methods
+
+class ChildClass(ParentClass):
+    # Child class attributes and methods
+
+Example
+Here's an example to illustrate inheritance in Python:
+
+Parent Class
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print(f"{self.name} makes a sound")
+
+Child Class
+
+class Dog(Animal):
+    def speak(self):
+        print(f"{self.name} barks")
+
+class Cat(Animal):
+    def speak(self):
+        print(f"{self.name} meows")
+
+Using the Classes
+
+dog = Dog("Buddy")
+cat = Cat("Whiskers")
+
+dog.speak()  # Output: Buddy barks
+cat.speak()  # Output: Whiskers meows
+
+In this example:
+
+The Animal class is the parent class with a constructor 
+method (__init__) and a method speak.
+The Dog and Cat classes are child classes that inherit from 
+Animal. They override the speak method to provide specific 
+behavior for dogs and cats.
+
+Multiple Inheritance
+Python also supports multiple inheritance, where a class can 
+inherit from more than one parent class.
+
+Example of Multiple Inheritance
+
+class Walker:
+    def walk(self):
+        print("Walking")
+
+class Swimmer:
+    def swim(self):
+        print("Swimming")
+
+class Duck(Walker, Swimmer):
+    pass
+
+duck = Duck()
+duck.walk()  # Output: Walking
+duck.swim()  # Output: Swimming
+In this example:
+
+The Duck class inherits from both Walker and Swimmer, allowing 
+instances of Duck to use methods from both parent classes.
+
+Overriding Methods
+A child class can override a method from its parent class to 
+change or extend its behavior.
+
+Example of Method Overriding
+
+class Bird(Animal):
+    def speak(self):
+        print(f"{self.name} chirps")
+
+    def fly(self):
+        print(f"{self.name} is flying")
+
+bird = Bird("Tweety")
+bird.speak()  # Output: Tweety chirps
+bird.fly()    # Output: Tweety is flying
+
+In this example:
+
+The Bird class inherits from Animal and overrides the speak method.
+It also adds a new method fly.
+
+Using super()
+The super() function allows you to call methods from the parent 
+class in the child class.
+
+Example Using super()
+
+class Vehicle:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def info(self):
+        print(f"Vehicle: {self.brand} {self.model}")
+
+class Car(Vehicle):
+    def __init__(self, brand, model, year):
+        super().__init__(brand, model)
+        self.year = year
+
+    def info(self):
+        super().info()
+        print(f"Year: {self.year}")
+
+car = Car("Toyota", "Camry", 2020)
+car.info()
+
+Output:
+Copy code
+Vehicle: Toyota Camry
+Year: 2020
+
+In this example:
+
+The Car class inherits from Vehicle.
+The Car class's __init__ method calls the __init__ method of 
+Vehicle using super().
+The Car class's info method calls the info method of Vehicle 
+using super() and then adds more information.
+
+Conclusion
+Inheritance in Python allows for code reuse, better organization, 
+and the creation of hierarchical relationships between classes. 
+By using inheritance, you can build on existing code and create 
+more complex and specialized classes without rewriting code.
