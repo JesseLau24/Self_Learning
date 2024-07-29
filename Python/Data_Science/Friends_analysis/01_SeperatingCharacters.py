@@ -1,8 +1,8 @@
 import os
 
 # File paths
-input_file_path = '/home/jesse/code/Self_Learning/Python/Data_Science/Friends_analysis/Full_seasonwise/season1_friends.txt'
-output_folder_path = '/home/jesse/code/Self_Learning/Python/Data_Science/Friends_analysis/Full_seasonwise/Season_1'
+input_file_path = '/home/jesse/Projects/Self_Learning/Python/Data_Science/Friends_analysis/Full_seasonwise/season1_friends.txt'
+output_folder_path = '/home/jesse/Projects/Self_Learning/Python/Data_Science/Friends_analysis/Full_seasonwise/Season_1'
 
 # Create the output folder if it doesn't exist
 os.makedirs(output_folder_path, exist_ok=True)
