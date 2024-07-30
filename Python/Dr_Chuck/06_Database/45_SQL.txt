@@ -1,0 +1,43 @@
+1. What is a Database?
+A database is an organized collection of structured information 
+or data, typically stored electronically in a computer system. 
+Databases are designed to manage, retrieve, and store large 
+amounts of data efficiently. They help users to store data in a 
+way that can be easily accessed, managed, and updated.
+
+2. What is SQL?
+SQL stands for Structured Query Language. It’s a standard programm
+-ing language used to manage and manipulate relational databases. 
+SQL provides commands to:
+
+--Query the database to retrieve specific data.
+--Insert new data.
+--Update existing data.
+--Delete data.
+--Create and manage database schema (e.g., tables, indexes).
+--Common SQL commands include SELECT, INSERT, UPDATE, DELETE, 
+  CREATE TABLE, and DROP TABLE.
+
+3. What is SQLite?
+SQLite is a lightweight, serverless, self-contained SQL database 
+engine. It’s a software library that provides a relational 
+database management system (RDBMS). Here are some key points:
+
+--Serverless: SQLite doesn’t require a separate server process. 
+  It runs as a part of the application and accesses the database 
+  files directly.
+--Self-contained: It requires minimal setup and doesn’t have 
+  dependencies on other libraries.
+--File-based: It stores the entire database as a single file on 
+  disk, making it portable and easy to manage.
+--Cross-platform: SQLite works on various operating systems, 
+  including Windows, macOS, Linux, iOS, and Android.
+--SQLite is often used for small to medium-sized applications, 
+  testing, and scenarios where simplicity and ease of setup are 
+  important. It’s particularly popular in mobile applications and 
+  embedded systems.
+
+Summary
+Database: A system for storing and organizing data.
+SQL: A language for querying and managing relational databases.
+SQLite: A lightweight, file-based relational database engine that’s easy to use and integrate.
