@@ -34,7 +34,7 @@ except IOError:
 print('current working directory:',os.getcwd())
 
 # now we need the correct directory of the test file
-file_dir = '/home/jesse/VS_Code_Projects/Self_Learning/Python/Dr_Chuck/11_test.txt'
+file_dir = '/home/jesse/Projects/Self_Learning/Python/Dr_Chuck/02_DataStructures/11_test.txt'
 try:
     with open(file_dir, 'r') as xfile:
         file_contents = xfile.read()
@@ -97,7 +97,7 @@ if not isFlag:
     print('Target not found.')
 
 # Prompt for File Name
-target_dir = '/home/jesse/VS_Code_Projects/Self_Learning/Python/Dr_Chuck/'
+target_dir = '/home/jesse/Projects/Self_Learning/Python/Dr_Chuck/02_DataStructures/'
 file_name = input('Enter file name: ')
 
 try:

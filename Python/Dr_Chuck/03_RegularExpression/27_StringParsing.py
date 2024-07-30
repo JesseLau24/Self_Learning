@@ -7,7 +7,7 @@ y = re.findall('@([^ ]*)', lin) # Pattern @([^ ]*): This matches @ followed by z
 print(y)
 
 # now we try to achieve this with files and also make it even cooler
-file_dir = '/home/jesse/VS_Code_Projects/Self_Learning/Python/Dr_Chuck/23_test.txt'
+file_dir = '/home/jesse/Projects/Self_Learning/Python/Dr_Chuck/03_RegularExpression/23_test.txt'
 
 tar_lst = list()
 

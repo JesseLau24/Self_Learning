@@ -21,7 +21,7 @@ z = re.findall('[0-9]+', x)
 print(z)
 
 # another example:
-file_dir = '/home/jesse/VS_Code_Projects/Self_Learning/Python/Dr_Chuck/23_test.txt'
+file_dir = '/home/jesse/Projects/Self_Learning/Python/Dr_Chuck/03_RegularExpression/23_test.txt'
 
 tar_lst = list()
 
@@ -34,7 +34,7 @@ with open(file_dir, 'r') as file:
 print(tar_lst)
 
 # we can also search all 'f' words
-file_dir = '/home/jesse/VS_Code_Projects/Self_Learning/Python/Dr_Chuck/18_MushroomRock.txt'
+file_dir = '/home/jesse/Projects/Self_Learning/Python/Dr_Chuck/02_DataStructures/18_MushroomRock.txt'
 
 f_words = set() # use set to automatically handle duplicate
 
@@ -49,7 +49,7 @@ f_words = list(f_words)
 print('f words in mushroom Rock:\n', f_words)
 
 # or create dict to count frequency:
-file_dir = '/home/jesse/VS_Code_Projects/Self_Learning/Python/Dr_Chuck/18_MushroomRock.txt'
+file_dir = '/home/jesse/Projects/Self_Learning/Python/Dr_Chuck/02_DataStructures/18_MushroomRock.txt'
 
 f_words = dict()
 

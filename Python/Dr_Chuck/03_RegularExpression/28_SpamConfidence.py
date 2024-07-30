@@ -1,7 +1,7 @@
 import re
 
 # Specify the file path to open
-file_dir = '/home/jesse/VS_Code_Projects/Self_Learning/Python/Dr_Chuck/28_mbox-short.txt'
+file_dir = '/home/jesse/Projects/Self_Learning/Python/Dr_Chuck/03_RegularExpression/28_mbox-short.txt'
 
 # Open the file for reading
 hand = open(file_dir)

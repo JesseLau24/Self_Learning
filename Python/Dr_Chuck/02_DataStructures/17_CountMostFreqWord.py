@@ -1,7 +1,7 @@
 import os
 
 # the cwd is not this folder
-cw_dir = os.getcwd()  + '/Python/Dr_Chuck/'
+cw_dir = os.getcwd()  + '/Python/Dr_Chuck/02_DataStructures/'
 file_name = input('input file name: ')
 file_dir = cw_dir + file_name
 

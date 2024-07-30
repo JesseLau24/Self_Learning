@@ -1,7 +1,7 @@
 # using the code in RegularExpression.py as an example
 import re
 
-file_dir = '/home/jesse/VS_Code_Projects/Self_Learning/Python/Dr_Chuck/23_test.txt'
+file_dir = '/home/jesse/Projects/Self_Learning/Python/Dr_Chuck/03_RegularExpression/23_test.txt'
 
 # Find lines containing 'The'
 print("Lines with 'The':")

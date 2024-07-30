@@ -1,5 +1,5 @@
 # open file
-file_dir = '/home/jesse/VS_Code_Projects/Self_Learning/Python/Dr_Chuck/18_MushroomRock.txt'
+file_dir = '/home/jesse/Projects/Self_Learning/Python/Dr_Chuck/02_DataStructures/18_MushroomRock.txt'
 fhand = open(file_dir)
 
 # create an empty dict

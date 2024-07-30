@@ -1,5 +1,5 @@
 # Counting words in file with dict
-file_dir = '/home/jesse/VS_Code_Projects/Self_Learning/Python/Dr_Chuck/11_test.txt'
+file_dir = '/home/jesse/Projects/Self_Learning/Python/Dr_Chuck/02_DataStructures/11_test.txt'
 freq = dict()
 
 try:

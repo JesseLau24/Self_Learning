@@ -23,14 +23,15 @@ class FootballFan(PartyAnimal):
 s = PartyAnimal('Sally')
 s.party()
 # for Sally, the party count would be updated and stored each 
-# time .party() is called
+# time '.party()' is called
 s.party()
 
 j = FootballFan('Jim')
 j.party()
 j.touchdown() 
 # for Jim,too, the touchdown points and party counts would be 
-# updated and stored in memory
+# updated and stored in memory each time '.party()' or 
+# '.touchdown()' is called
 j.touchdown()
 
 

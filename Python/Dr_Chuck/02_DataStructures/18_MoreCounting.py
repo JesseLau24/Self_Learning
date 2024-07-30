@@ -1,7 +1,7 @@
 import os
 
 # Define the working directory
-cw_dir = os.getcwd()  + '/Python/Dr_Chuck/'
+cw_dir = os.getcwd()  + '/Python/Dr_Chuck/02_DataStructures/'
 file_name = input('Input file name: ')
 file_path = cw_dir + file_name
 

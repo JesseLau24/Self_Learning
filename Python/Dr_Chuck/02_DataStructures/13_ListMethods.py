@@ -35,7 +35,7 @@ print('sum(nums)/len(nums)=average', sum(nums)/len(nums))
 usr_input = list()
 
 while True:
-    n = input('>>>')
+    n = input('Input number, and input done if finish >>>')
     if n.lower() == 'done':
         break
     else:
