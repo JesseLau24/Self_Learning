@@ -1,0 +1,104 @@
+Inserting Data Using SQLite Command-Line Interface
+
+1. Open the Terminal:
+Ensure you are in the terminal of your Debian Bookworm system.
+
+2. Navigate to Your Directory:
+Change to the directory where your SQLite database (py4efun.db) is 
+located:
+
+    bash
+    Copy code
+    cd /home/jesse/Projects/Self_Learning/Python/Dr_Chuck/06_Database/
+
+3. Open SQLite Interface:
+Launch the SQLite command-line interface with your database file:
+
+    bash
+    Copy code
+    sqlite3 py4efun.db
+
+4. Create the Table:
+Once you are in the SQLite interface, use the following SQL 
+command to create a table named users with name and email columns, 
+both of type TEXT:
+
+    sql
+    Copy code
+    CREATE TABLE users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL,
+        email TEXT NOT NULL
+    );
+
+id INTEGER PRIMARY KEY AUTOINCREMENT: An auto-incrementing primary 
+key for uniquely identifying each record.
+name TEXT NOT NULL: A column for storing the user’s name, which is 
+required (NOT NULL).
+email TEXT NOT NULL: A column for storing the user’s email, which 
+is also required (NOT NULL).
+
+
+5. Insert Data:
+Use the INSERT INTO SQL command to add each record into the users 
+table. Enter the following commands one by one in the SQLite 
+command-line interface:
+
+    sql
+    Copy code
+    INSERT INTO users (name, email) VALUES ('jesse', 'jesse@gmail.com');
+    INSERT INTO users (name, email) VALUES ('grace', 'grace2gmail.com');
+    INSERT INTO users (name, email) VALUES ('dollar', 'dollar@gmail.com');
+    INSERT INTO users (name, email) VALUES ('niuniu', 'niuniu@gmail.com');
+    INSERT INTO users (name, email) VALUES ('huahua', 'huahua@gmail.com');
+    INSERT INTO users (name, email) VALUES ('lucky', 'lucky@gmail.com');
+    INSERT INTO users (name, email) VALUES ('sunny', 'sunny@gmail.com');
+
+6. Verify Data Insertion:
+To check if the data has been inserted correctly, you can query the 
+table:
+
+    sql
+    Copy code
+    SELECT * FROM users;
+
+This command will display all rows in the users table.
+
+7. Update the Record:
+Use the UPDATE SQL command to modify the email address of the user 
+'niuniu'. Enter the following command in the SQLite command-line 
+interface:
+
+    sql
+    Copy code
+    UPDATE users
+    SET email = 'taoqi2gmail.com'
+    WHERE name = 'niuniu';
+
+This command updates the email column for the row where the name column matches niuniu.
+
+Verify the Update:
+To check if the update was successful, query the table:
+
+sql
+Copy code
+SELECT * FROM users WHERE name = 'niuniu';
+This command will display the row where the name is niuniu, allowing you to verify that the email address has been updated.
+
+8. Delete the Record:
+Use the DELETE SQL command to remove the record where the name is 
+huahua. Enter the following command in the SQLite command-line 
+interface:
+
+    sql
+    Copy code
+    DELETE FROM users
+    WHERE name = 'huahua';
+    This command deletes the row from the users table where the name column matches sunny.
+
+9. Exit SQLite Interface:
+To exit the SQLite command-line interface, type:
+
+    sql
+    Copy code
+    .exit
