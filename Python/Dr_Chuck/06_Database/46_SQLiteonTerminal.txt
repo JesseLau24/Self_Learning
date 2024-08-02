@@ -80,9 +80,10 @@ This command updates the email column for the row where the name column matches 
 Verify the Update:
 To check if the update was successful, query the table:
 
-sql
-Copy code
-SELECT * FROM users WHERE name = 'niuniu';
+    sql
+    Copy code
+    SELECT * FROM users WHERE name = 'niuniu';
+
 This command will display the row where the name is niuniu, allowing you to verify that the email address has been updated.
 
 8. Delete the Record:
@@ -102,3 +103,4 @@ To exit the SQLite command-line interface, type:
     sql
     Copy code
     .exit
+    
