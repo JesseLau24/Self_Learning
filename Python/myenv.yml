@@ -1,0 +1,23 @@
+name: myenv
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11.2
+  - jupyter
+  - notebook
+  - conda-forge::numpy
+  - conda-forge::matplotlib
+  - conda-forge::seaborn
+  - conda-forge::scikit-learn
+  - conda-forge::networkx
+  - conda-forge::jieba
+  - conda-forge::textblob
+  - conda-forge::wordcloud
+  - conda-forge::gensim
+  - scipy==1.10.1
+  - conda-forge::pyldavis
+  - conda-forge::pytorch-cpu
+  - conda-forge::transformers
+  - spacy
+  - conda-forge::squarify
+prefix: /home/jesse/miniforge3/envs/myenv
