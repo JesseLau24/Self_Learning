@@ -16,7 +16,7 @@ Launch the SQLite command-line interface with your database file:
 
     bash
     Copy code
-    sqlite3 py4efun.db
+    sqlite3 py4fun.db
 
 4. Create the Table:
 Once you are in the SQLite interface, use the following SQL 

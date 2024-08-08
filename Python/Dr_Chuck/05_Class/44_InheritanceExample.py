@@ -18,6 +18,8 @@ class Dog(Animal):
 class Cat(Animal):
     # Override the speak method for the Cat class
     def speak(self):
+        super().speak() # here, it didn't override the speak from parent.
+        # it adds the following line
         print(f"{self.name} meows")
 
 # Create an instance of Dog with the name "Buddy"
