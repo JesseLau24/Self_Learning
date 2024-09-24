@@ -1,0 +1,13 @@
+# 忽略 Python 虚拟环境
+venv/
+myenvs/
+
+# 忽略 VS Code 设置
+.vscode/
+
+# 忽略 Jupyter Notebook 的检查点
+.ipynb_checkpoints/
+
+# 忽略临时文件
+__pycache__/
+*.py[cod]
