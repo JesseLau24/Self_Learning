@@ -6,7 +6,6 @@
 示例：
 Input: s = "babad"
 Output: "bab"
-要求：可以使用中心扩展算法或动态规划。
 '''
 
 def longest_palindrome(s: str) -> str:
@@ -32,7 +31,7 @@ def longest_palindrome(s: str) -> str:
 
     return longest
 
-# 示例
+# 获取用户输入
 s = input('Input String: ')
 print(longest_palindrome(s))
 
