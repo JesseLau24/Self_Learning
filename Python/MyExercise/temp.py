@@ -1,31 +1,23 @@
-'''
-最长回文子串
-难度：中等
+import time 
 
-问题：给定一个字符串 s, 找到其中最长的回文子串。
-示例：
-Input: s = "babad"
-Output: "bab"
-'''
+tar = [34, 76, 2, 3, 54, 45, 5, 34, 72, 11, 19, 82, 20, 93, 99, 25, 33, 92, 37, 4, 14, 68, 70, 96, 61, 8, 44, 17, 12, 74, 31, 84, 38, 39, 60, 88, 1, 13, 79, 30, 6, 58, 85, 64, 27, 66, 23, 77, 48, 69, 10, 36, 73, 26, 53, 65, 9, 86, 24, 62, 15, 80, 81, 35, 16, 63, 71, 75, 90, 87, 18, 59, 46, 7, 32, 52, 40, 41, 50, 47, 49, 78, 94, 42, 55, 56, 57, 95, 100, 91, 97, 98]
 
-def longest_palindrome(s:str) -> str:
-    if not s or len(s) == 0:
-        return ''
 
-    def check_both_sides(left: int, right: int) -> str:
-        while left != 0 and right < len(s) and s[left] == s[right]: 
-            left -= 1
-            right += 1
-        return s[left+1:right]
+def find_duplicated(l: list) -> list:
+    seen = set()
+    duplicates = set()
     
-    longest = ''
+    for num in l:
+        if num in seen:
+            duplicates.add(num)
+        else:
+            seen.add(num)
+    
+    return list(duplicates)
 
-    for i in range(len(s)):
-        odd = check_both_sides(i, i)
-        even = check_both_sides(i, i+1)
-        longest = max(longest, odd, even, key=len)
+start_time = time.time()
 
-    return longest
+print(find_duplicated(tar))
 
-s = input('Input String: ')
-print(longest_palindrome(s))
+end_time = time.time()
+print(f"Elapsed time: {end_time - start_time} seconds")
