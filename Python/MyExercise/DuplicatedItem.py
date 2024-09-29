@@ -10,21 +10,19 @@ tar = [34, 76, 2, 3, 54, 45, 5, 34, 72, 11, 19, 82, 20, 93,
        85, 64, 27, 66, 23, 77, 48, 69, 10, 36, 73, 26, 53, 65, 
        9, 86, 24, 62, 15, 80, 81, 35, 16, 63, 71, 75, 90, 87, 
        18, 59, 46, 7, 32, 52, 40, 41, 50, 47, 49, 78, 94, 42, 
-       55, 56, 57, 95, 100, 91, 97, 98]
+       55, 56, 57, 95, 100, 54, 72, 19, 13, 5, 66, 91, 97, 98]
 
-def find_duplicated(l:list) -> list:
-    dup_l = []
-    for i in range(len(l)):
-        temp = i + 1
-        while temp < len(l):
-            if l[i] in dup_l:
-                break
-            else:
-                if l[i] == l[temp]:
-                    dup_l.append(l[i])
-                    break
-                else:
-                    temp += 1
+def find_duplicated(targer_list:list) -> list:
+    dup_l = set()
+    seen_l = set()
+    for i in targer_list:
+        if i in seen_l:
+            dup_l.add(i)
+        else:
+            seen_l.add(i)
+    
+    #转换成list后输出     
+    dup_l = list(dup_l)
     return dup_l
 
 start_time = time.time()
