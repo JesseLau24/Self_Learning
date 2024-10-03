@@ -3,15 +3,17 @@
 返回前 n 个斐波那契数的列表。斐波那契数列的定义为：
 F(0) = 0, F(1) = 1, F(n) = F(n-1) + F(n-2)。
 '''
-def fibonacci_sequence(n:int) -> list:
-    if n < 3:
-        return "n must be greater than or equal to 3!"
+def fibonacci_sequence(n: int) -> list:
+    if n == 1:
+        return [0]
+    elif n == 2:
+        return [0, 1]
     else:
-        list = [0, 1]
+        fib_list = [0, 1]
         for i in range(2, n):
-            list.append(list[i-1] + list[i-2])
+            fib_list.append(fib_list[i - 1] + fib_list[i - 2])
 
-    return list
+    return fib_list
 
 n = int(input('n: '))
 print(fibonacci_sequence(n))
