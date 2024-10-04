@@ -3,18 +3,23 @@
 其中连续重复的字符用字符加上其出现次数来表示。
 例如，输入 "aaabbc" 应返回 "a3b2c1"。
 '''
-def str_compress(s:str) -> str:
-    i = 0
+def str_compress(s: str) -> str:
+    if not s:  # 如果字符串为空，直接返回空字符串
+        return ''
+    
     compressed = ''
-    while i < len(s) - 2:
+    i = 0
+
+    while i < len(s):
         count = 1
-        temp = i + 1
-        while s[i] == s[temp]:
+        while i + 1 < len(s) and s[i] == s[i + 1]:
             count += 1
-            temp += 1
+            i += 1
         compressed += s[i] + str(count)
-        i = temp
+        i += 1
+
     return compressed
 
+# 测试
 string = input('Input String: ')
 print(str_compress(string))
