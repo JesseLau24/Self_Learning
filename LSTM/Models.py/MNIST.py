@@ -3,6 +3,10 @@ import tensorflow as tf
 from tensorflow.keras import layers, models
 from tensorflow.keras.datasets import mnist
 from tensorflow.keras.utils import to_categorical
+import time
+
+# Start Time
+start_time = time.time()
 
 # Step 1: Load and preprocess the data
 # MNIST dataset is included in Keras, we can load it directly
@@ -47,3 +51,9 @@ test_loss, test_acc = model.evaluate(x_test, y_test)
 
 # Print the test accuracy
 print(f'Test accuracy: {test_acc}')
+
+# End Time
+end_time = time.time()
+
+# Print Total Time Consumed
+print(f"Elapsed time: {end_time - start_time:.2f} seconds")
