@@ -59,4 +59,4 @@ end_time = time.time()
 print(f"Elapsed time: {end_time - start_time:.2f} seconds")
 
 # Save Model to Directory
-model.save(r'C:\Users\jesse\Projects\Self_Learning\LSTM\Models\mnist_digit_recognizer.h5')
+model.save('/home/jesse/Projects/Self_Learning/LSTM/Models/mnist_digit_recognizer.keras')
