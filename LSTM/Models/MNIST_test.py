@@ -6,7 +6,7 @@ import numpy as np
 model = load_model('/home/jesse/Projects/Self_Learning/LSTM/Models/mnist_digit_recognizer.keras')
 
 # Load Pic and Convert to Grey
-image = Image.open('/home/jesse/Projects/Self_Learning/LSTM/Pics/test_1.png').convert('L')
+image = Image.open('/home/jesse/Projects/Self_Learning/LSTM/Pics/test_8.png').convert('L')
 
 # Resize image (28x28) and choose resampling filter (NEAREST)
 image = image.resize((28, 28), Image.Resampling.NEAREST)
