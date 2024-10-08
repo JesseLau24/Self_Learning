@@ -52,7 +52,7 @@ model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001),
 early_stopping = EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True)
 
 # Fit the model to the training data
-model.fit(x_train, y_train, epochs=1000, batch_size=128, validation_data=(x_test, y_test), callbacks=[early_stopping])
+model.fit(x_train, y_train, epochs=100, batch_size=128, validation_data=(x_test, y_test), callbacks=[early_stopping])
 
 # Step 5: Evaluate the model on the test data
 test_loss, test_acc = model.evaluate(x_test, y_test)
@@ -67,4 +67,4 @@ end_time = time.time()
 print(f"Elapsed time: {end_time - start_time:.2f} seconds")
 
 # Save Model to Directory
-model.save(r'C:\Users\jesse\Projects\Self_Learning\LSTM\Models\mnist_digit_recognizer.keras')
+model.save('/home/jesse/Projects/Self_Learning/LSTM/Models/t2_mnist_digit_recognizer.keras')
