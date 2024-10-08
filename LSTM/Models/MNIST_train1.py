@@ -38,13 +38,13 @@ model.add(layers.Dense(10, activation='softmax'))
 
 # Step 3: Compile the model
 # Define the loss function, optimizer, and metrics to track
-model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),
+model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001),
               loss='categorical_crossentropy',
               metrics=['accuracy'])
 
 # Step 4: Train the model
 # Fit the model to the training data
-model.fit(x_train, y_train, epochs=30, batch_size=128, validation_data=(x_test, y_test))
+model.fit(x_train, y_train, epochs=80, batch_size=128, validation_data=(x_test, y_test))
 
 # Step 5: Evaluate the model on the test data
 test_loss, test_acc = model.evaluate(x_test, y_test)
@@ -59,4 +59,4 @@ end_time = time.time()
 print(f"Elapsed time: {end_time - start_time:.2f} seconds")
 
 # Save Model to Directory
-model.save('/home/jesse/Projects/Self_Learning/LSTM/Models/mnist_digit_recognizer.keras')
+model.save(r'C:\Users\jesse\Projects\Self_Learning\LSTM\Models\mnist_digit_recognizer.keras')
