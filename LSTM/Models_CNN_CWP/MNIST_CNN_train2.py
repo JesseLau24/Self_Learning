@@ -65,4 +65,4 @@ end_time = time.time()
 print(f"Elapsed time: {end_time - start_time:.2f} seconds")
 
 # Save the model
-model.save(r'C:\Users\jesse\Projects\Self_Learning\LSTM\Models_CNN_Win\cnn_mnist_digit_recognizer.keras')
+model.save('/home/jesse/Projects/Self_Learning/LSTM/Models_CNN_CWP/cwp_cnn_mnist_digit_recognizer.keras')

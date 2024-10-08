@@ -52,7 +52,7 @@ model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001),
               metrics=['accuracy'])
 
 # Step 4: Train the model
-model.fit(x_train, y_train, epochs=50, batch_size=64, validation_data=(x_test, y_test))
+model.fit(x_train, y_train, epochs=10, batch_size=64, validation_data=(x_test, y_test))
 
 # Step 5: Evaluate the model on the test data
 test_loss, test_acc = model.evaluate(x_test, y_test)
@@ -65,4 +65,4 @@ end_time = time.time()
 print(f"Elapsed time: {end_time - start_time:.2f} seconds")
 
 # Save the model
-model.save(r'C:\Users\jesse\Projects\Self_Learning\LSTM\Models_CNN_Win\cnn_mnist_digit_recognizer.keras')
+model.save('/home/jesse/Projects/Self_Learning/LSTM/Models_CNN_CWP/cwp_cnn_mnist_digit_recognizer.keras')
