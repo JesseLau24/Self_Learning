@@ -1,9 +1,9 @@
 # Import necessary libraries
 import tensorflow as tf
-from tensorflow.keras import layers, models
-from tensorflow.keras.datasets import mnist
-from tensorflow.keras.utils import to_categorical
-from tensorflow.keras.callbacks import EarlyStopping
+from tensorflow.keras import layers, models # type: ignore
+from tensorflow.keras.datasets import mnist # type: ignore
+from tensorflow.keras.utils import to_categorical # type: ignore
+from tensorflow.keras.callbacks import EarlyStopping # type: ignore
 import time
 
 # Start Time
@@ -52,7 +52,7 @@ model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001),
 early_stopping = EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True)
 
 # Fit the model to the training data
-model.fit(x_train, y_train, epochs=100, batch_size=128, validation_data=(x_test, y_test), callbacks=[early_stopping])
+model.fit(x_train, y_train, epochs=1000, batch_size=128, validation_data=(x_test, y_test), callbacks=[early_stopping])
 
 # Step 5: Evaluate the model on the test data
 test_loss, test_acc = model.evaluate(x_test, y_test)

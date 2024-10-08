@@ -1,4 +1,4 @@
-from tensorflow.keras.models import load_model
+from tensorflow.keras.models import load_model # type: ignore
 from PIL import Image
 import numpy as np
 
