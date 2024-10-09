@@ -3,7 +3,7 @@ from PIL import Image
 import numpy as np
 
 # Load Model
-model = load_model('/home/jesse/Projects/Self_Learning/LSTM/Models_CNN_CWP/cwp_cnn_mnist_digit_recognizer.keras')
+model = load_model('/home/jesse/Projects/Self_Learning/LSTM/Models_CNN_CWP/t_2cwp_cnn_mnist_digit_recognizer.keras')
 
 # Load Pic and Convert to Grey
 image = Image.open('/home/jesse/Projects/Self_Learning/LSTM/Pics/1.png').convert('L')
