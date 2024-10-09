@@ -6,7 +6,7 @@ import numpy as np
 model = load_model('/home/jesse/Projects/Self_Learning/LSTM/Models_Dense_CWP/t2_mnist_digit_recognizer.keras')
 
 # Load Pic and Convert to Grey
-image = Image.open('/home/jesse/Projects/Self_Learning/LSTM/Pics/6.png').convert('L')
+image = Image.open('/home/jesse/Projects/Self_Learning/LSTM/Pics/5.png').convert('L')
 
 # Resize image (28x28) and choose resampling filter (NEAREST)
 image = image.resize((28, 28), Image.NEAREST)
