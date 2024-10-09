@@ -1,8 +1,8 @@
 # Import necessary libraries
 import tensorflow as tf
-from tensorflow.keras import layers, models # type: ignore
-from tensorflow.keras.datasets import mnist # type: ignore
-from tensorflow.keras.utils import to_categorical # type: ignore
+from keras import layers, models # type: ignore
+from keras.datasets import mnist # type: ignore
+from keras.utils import to_categorical # type: ignore
 import time
 
 # Start Time
@@ -52,7 +52,7 @@ model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001),
               metrics=['accuracy'])
 
 # Step 4: Train the model
-model.fit(x_train, y_train, epochs=50, batch_size=64, validation_data=(x_test, y_test))
+model.fit(x_train, y_train, epochs=25, batch_size=64, validation_data=(x_test, y_test))
 
 # Step 5: Evaluate the model on the test data
 test_loss, test_acc = model.evaluate(x_test, y_test)

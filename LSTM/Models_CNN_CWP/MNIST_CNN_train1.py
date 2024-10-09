@@ -1,8 +1,8 @@
 # Import necessary libraries
 import tensorflow as tf
-from tensorflow.keras import layers, models # type: ignore
-from tensorflow.keras.datasets import mnist # type: ignore
-from tensorflow.keras.utils import to_categorical # type: ignore
+from keras import layers, models # type: ignore
+from keras.datasets import mnist # type: ignore
+from keras.utils import to_categorical # type: ignore
 import time
 
 # Start Time

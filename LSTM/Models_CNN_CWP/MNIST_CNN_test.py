@@ -1,4 +1,4 @@
-from tensorflow.keras.models import load_model # type: ignore
+from keras.models import load_model # type: ignore
 from PIL import Image
 import numpy as np
 
@@ -6,7 +6,7 @@ import numpy as np
 model = load_model('/home/jesse/Projects/Self_Learning/LSTM/Models_CNN_CWP/cwp_cnn_mnist.keras')
 
 # Load Pic and Convert to Grey
-image = Image.open('/home/jesse/Projects/Self_Learning/LSTM/Pics/9.png').convert('L')
+image = Image.open('/home/jesse/Projects/Self_Learning/LSTM/Pics/0.png').convert('L')
 # Resize image (28x28) and choose resampling filter (NEAREST)
 image = image.resize((28, 28), Image.NEAREST)
 
