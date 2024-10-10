@@ -25,11 +25,17 @@ model = models.Sequential()
 # Add a convolutional layer with 64 filters, kernel size 5x5, and ReLU activation function
 model.add(layers.Conv2D(64, (5, 5), activation='relu', input_shape=(28, 28, 1)))
 
+# Add batch normalization after the convolutional layer
+model.add(layers.BatchNormalization())
+
 # Add a max pooling layer to downsample the feature maps
 model.add(layers.MaxPooling2D((2, 2)))
 
 # Add a second convolutional layer with 128 filters
 model.add(layers.Conv2D(128, (5, 5), activation='relu'))
+
+# Add batch normalization after the second convolutional layer
+model.add(layers.BatchNormalization())
 
 # Add another max pooling layer
 model.add(layers.MaxPooling2D((2, 2)))
@@ -37,11 +43,17 @@ model.add(layers.MaxPooling2D((2, 2)))
 # Add a third convolutional layer with 128 filters, kernel size 3x3, and ReLU activation function
 model.add(layers.Conv2D(128, (3, 3), activation='relu'))
 
+# Add batch normalization after the third convolutional layer
+model.add(layers.BatchNormalization())
+
 # Flatten the 3D feature maps to 1D feature vectors
 model.add(layers.Flatten())
 
 # Add a fully connected (Dense) layer with 64 units
 model.add(layers.Dense(64, activation='relu'))
+
+# Optionally, add batch normalization to the Dense layer
+model.add(layers.BatchNormalization())
 
 # Add the output layer with 10 units (one for each digit) and softmax activation for classification
 model.add(layers.Dense(10, activation='softmax'))
