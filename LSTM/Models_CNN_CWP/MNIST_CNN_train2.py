@@ -22,19 +22,19 @@ y_test = to_categorical(y_test)
 # Step 2: Build the CNN model
 model = models.Sequential()
 
-# Add a convolutional layer with 32 filters, kernel size 3x3, and ReLU activation function
+# Add a convolutional layer with 64 filters, kernel size 5x5, and ReLU activation function
 model.add(layers.Conv2D(64, (5, 5), activation='relu', input_shape=(28, 28, 1)))
 
 # Add a max pooling layer to downsample the feature maps
 model.add(layers.MaxPooling2D((2, 2)))
 
-# Add a second convolutional layer with 64 filters
+# Add a second convolutional layer with 128 filters
 model.add(layers.Conv2D(128, (5, 5), activation='relu'))
 
 # Add another max pooling layer
 model.add(layers.MaxPooling2D((2, 2)))
 
-# Add a third convolutional layer with 64 filters
+# Add a third convolutional layer with 128 filters, kernel size 3x3, and ReLU activation function
 model.add(layers.Conv2D(128, (3, 3), activation='relu'))
 
 # Flatten the 3D feature maps to 1D feature vectors
@@ -46,13 +46,16 @@ model.add(layers.Dense(64, activation='relu'))
 # Add the output layer with 10 units (one for each digit) and softmax activation for classification
 model.add(layers.Dense(10, activation='softmax'))
 
+# Add model.summary() to display the model architecture
+model.summary()
+
 # Step 3: Compile the model
 model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001),
               loss='categorical_crossentropy',
               metrics=['accuracy'])
 
 # Step 4: Train the model
-model.fit(x_train, y_train, epochs=25, batch_size=64, validation_data=(x_test, y_test))
+model.fit(x_train, y_train, epochs=500, batch_size=64, validation_data=(x_test, y_test))
 
 # Step 5: Evaluate the model on the test data
 test_loss, test_acc = model.evaluate(x_test, y_test)

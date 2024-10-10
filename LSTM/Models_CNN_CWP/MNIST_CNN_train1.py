@@ -46,6 +46,9 @@ model.add(layers.Dense(64, activation='relu'))
 # Add the output layer with 10 units (one for each digit) and softmax activation for classification
 model.add(layers.Dense(10, activation='softmax'))
 
+# Add model.summary() to display the model architecture
+model.summary()
+
 # Step 3: Compile the model
 model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001),
               loss='categorical_crossentropy',
