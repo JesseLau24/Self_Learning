@@ -67,7 +67,7 @@ model.summary()
 initial_learning_rate = 0.001
 clr_schedule = tf.keras.optimizers.schedules.CosineDecayRestarts(
     initial_learning_rate=initial_learning_rate,
-    first_decay_steps=1000,  # Number of steps before the first learning rate decay
+    first_decay_steps=500,  # Number of steps before the first learning rate decay
     t_mul=2.0,  # How much to increase the decay steps after each restart
     m_mul=0.9,  # Multiplier to apply to the learning rate at each restart
     alpha=0.0   # Minimum learning rate as a fraction of the initial learning rate

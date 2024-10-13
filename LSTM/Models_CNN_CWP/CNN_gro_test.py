@@ -19,8 +19,8 @@ for image_file in image_files:
     image = Image.open(os.path.join(image_dir, image_file)).convert('L')
 
     # Adjust contrast
-    enhancer = ImageEnhance.Contrast(image)
-    image = enhancer.enhance(2)  # Adjust contrast, 2 means double the contrast
+    # enhancer = ImageEnhance.Contrast(image)
+    # image = enhancer.enhance(2)  # Adjust contrast, 2 means double the contrast
 
     
     # Resize image (28x28) and choose resampling filter (NEAREST)
