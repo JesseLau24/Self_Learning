@@ -53,8 +53,8 @@ model.add(layers.Flatten())
 model.add(layers.Dropout(0.5))  # Dropout before entering dense layers
 
 # OutPut Layer
-# Add a fully connected (Dense) layer with 256 units
-model.add(layers.Dense(256, activation='relu'))
+# Add a fully connected (Dense) layer with 512 units
+model.add(layers.Dense(512, activation='relu'))
 # Optionally, add batch normalization to the Dense layer
 model.add(layers.BatchNormalization())
 # Add the output layer with 10 units (one for each digit) and softmax activation for classification
