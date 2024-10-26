@@ -44,6 +44,7 @@ def list_pyramid(list:list, height) -> str:
 def name_pyramid(list: list) -> str:
     for i in range(1, len(list) + 1):
         print(' ' * (len(list) - i) + list[i-1] * (2 * i - 1))
+
 choice = input('''
                Please select your choice:
                1 to print pyramid with symbols of your choice
@@ -55,9 +56,11 @@ if choice == '1':
     height = int(input('Input height of the pyraimd: '))
     list = list(input('Input the symbols you like(without space or comma inbetween): '))
     list_pyramid(list, height)
+
 elif choice == '2':
     list = list(input('Your fisrt name: '))
     name_pyramid(list)
+    
 else:
     height = int(input('Input height of the pyraimd: '))
     star_pyramid(height)
