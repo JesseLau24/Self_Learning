@@ -24,20 +24,29 @@ model = models.Sequential()
 
 # First Convolutional Layer
 model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)))
+model.add(layers.BatchNormalization())
 model.add(layers.MaxPooling2D((2, 2)))
-model.add(layers.Dropout(0.25))  # Dropout to prevent overfitting
+model.add(layers.Dropout(0.2))  # Reduced dropout
 
 # Second Convolutional Layer
 model.add(layers.Conv2D(64, (3, 3), activation='relu'))
+model.add(layers.BatchNormalization())
 model.add(layers.MaxPooling2D((2, 2)))
-model.add(layers.Dropout(0.25))  # Dropout for additional regularization
+model.add(layers.Dropout(0.3))  # Slightly higher dropout
+
+# Third Convolutional Layer
+model.add(layers.Conv2D(128, (3, 3), activation='relu'))
+model.add(layers.BatchNormalization())
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Dropout(0.3))
 
 # Flatten the 3D feature maps to 1D feature vectors
 model.add(layers.Flatten())
-model.add(layers.Dropout(0.5))  # Dropout before entering dense layers
 
 # Dense Layer
-model.add(layers.Dense(128, activation='relu'))
+model.add(layers.Dense(256, activation='relu'))
+model.add(layers.BatchNormalization())
+model.add(layers.Dropout(0.4))  # Slightly reduced dropout
 
 # Output Layer
 model.add(layers.Dense(10, activation='softmax'))
@@ -58,7 +67,7 @@ clr_schedule = tf.keras.optimizers.schedules.CosineDecayRestarts(
 # Step 4: Set up EarlyStopping
 early_stopping = tf.keras.callbacks.EarlyStopping(
     monitor='val_loss',
-    patience=5,  # Reduce patience to prevent overfitting
+    patience=10,
     restore_best_weights=True
 )
 
@@ -70,7 +79,7 @@ model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=clr_schedule),
 # Step 6: Train the model
 model.fit(
     x_train, y_train,  # No data augmentation, using raw data
-    epochs=200,  # Limited epochs with early stopping
+    epochs=200,
     batch_size=64,
     validation_data=(x_test, y_test),
     callbacks=[early_stopping]
